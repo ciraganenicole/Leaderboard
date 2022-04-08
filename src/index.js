@@ -1,8 +1,10 @@
 import './style.css';
-import Players from '../modules/items';
+import Players from '../modules/items.js';
 
 const players = new Players();
-document.querySelector('.refresh').addEventListener('click', Players.refreshScore);
 document.querySelector('#list-form')
   .addEventListener('submit', players.addPlayer);
-document.addEventListener('DOMContentLoaded', Players.refreshScore);
+document.querySelector('#refresh').addEventListener('click', () => {
+  window.location.reload();
+});
+document.addEventListener('DOMContentLoaded', players.refreshScore);
