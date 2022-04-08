@@ -9,23 +9,23 @@
 <script defer src="/index.bundle.js"></script><script defer src="/items.bundle.js"></script></head>
 
 <body>
-    <h1>Leaderboard</h1>
     <section class="main-section">
         <div class="container">
+            <h1 class="main-title">Leaderboard</h1>
             <div class="refresh">
                 <h2>Recent scores</h2>
                 <input type="button" id="refresh" value="Refresh" />
             </div>
-            <div class="container-list">
+            <ul class="container-list">
 
-            </div>
+            </ul>
         </div>
-        <div id="block">
+        <span class="message"></span>
+        <div class="block">
             <h3> Add your score</h3>
             <form id="list-form">
                 <input name="name" id="name" type="text" placeholder="Your name" required class="input" />
                 <input name="score" id="score" type="number" placeholder="Your score" required class="input" />
-                <span class="message"></span>
                 <input type="submit" value="submit" class="add">
             </form>
         </div>
