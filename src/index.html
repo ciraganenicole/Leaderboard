@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -14,18 +14,19 @@
         <div class="container">
             <div class="refresh">
                 <h2>Recent scores</h2>
-                <button type="reset" class="reset">Refresh</button>
+                <input type="button" id="refresh" value="Refresh" />
             </div>
-            <div class="container-list">
+            <ul class="container-list">
 
-            </div>
+            </ul>
         </div>
         <div id="block">
             <h3> Add your score</h3>
             <form id="list-form">
                 <input name="name" id="name" type="text" placeholder="Your name" required class="input" />
                 <input name="score" id="score" type="number" placeholder="Your score" required class="input" />
-                <button type="submit" class="add">Submit</button>
+                <span class="message"></span>
+                <input type="submit" value="submit" class="add">
             </form>
         </div>
     </section>
