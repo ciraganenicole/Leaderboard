@@ -7,7 +7,7 @@ class Players {
       const name = document.createElement('li');
 
       name.innerHTML += `
-  <span>${userData.user}  </span><span>${userData.score}</span>
+  <span class="user">${userData.user}</span>:<span class="score">${userData.score}</span>
   `;
       player.appendChild(name);
     }
