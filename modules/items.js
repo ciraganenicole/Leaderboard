@@ -47,15 +47,15 @@ class Players {
       }
     }
 
-    refreshScore = (e) => {
-      e.preventDefault();
+    refreshScore = () => {
       fetch(`${request}UDkOGtyqoUJP8qpdFWU9/scores/`)
         .then((response) => response.json())
         .then((playerData) => {
           const list = document.querySelector('.container-list');
           list.replaceChildren();
-          playerData.result.forEach((score) => Players.initialize(score));
+          playerData.result.forEach((score) => this.showPlayer(score));
         });
+      return this.refreshScore;
     }
 
     games = async (request = '', playerData = {}) => {
